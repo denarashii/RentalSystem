@@ -1,0 +1,21 @@
+cat > .gitignore << 'EOF'
+# Build outputs
+bin/
+obj/
+*.user
+
+# IDE
+.vs/
+.vscode/
+*.suo
+
+# Frontend (once we get there)
+node_modules/
+dist/
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+EOF
