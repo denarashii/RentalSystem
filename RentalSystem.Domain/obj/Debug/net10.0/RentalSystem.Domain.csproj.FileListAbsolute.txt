@@ -9,3 +9,4 @@
 /home/den/repos/RentalSystem/RentalSystem.Domain/obj/Debug/net10.0/refint/RentalSystem.Domain.dll
 /home/den/repos/RentalSystem/RentalSystem.Domain/obj/Debug/net10.0/RentalSystem.Domain.pdb
 /home/den/repos/RentalSystem/RentalSystem.Domain/obj/Debug/net10.0/ref/RentalSystem.Domain.dll
+/home/den/repos/RentalSystem/RentalSystem.Domain/obj/Debug/net10.0/RentalSystem.Domain.sourcelink.json

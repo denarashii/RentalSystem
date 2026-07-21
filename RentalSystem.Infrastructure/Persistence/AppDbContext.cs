@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using RentalSystem.Application.Common.Interfaces;
 using RentalSystem.Domain.Entities;
 
 namespace RentalSystem.Infrastructure.Persistence;
 
-public class AppDbContext : DbContext
+public class AppDbContext : DbContext, IAppDbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

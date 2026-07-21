@@ -19,3 +19,4 @@
 /home/den/repos/RentalSystem/RentalSystem.Infrastructure/obj/Debug/net10.0/ref/RentalSystem.Infrastructure.dll
 /home/den/repos/RentalSystem/RentalSystem.Infrastructure/bin/Debug/net10.0/RentalSystem.Infrastructure.runtimeconfig.json
 /home/den/repos/RentalSystem/RentalSystem.Infrastructure/obj/Debug/net10.0/RentalSystem.Infrastructure.genruntimeconfig.cache
+/home/den/repos/RentalSystem/RentalSystem.Infrastructure/obj/Debug/net10.0/RentalSystem.Infrastructure.sourcelink.json
