@@ -36,9 +36,11 @@ public class GlobalExceptionMiddleware
                 HttpStatusCode.BadRequest,
                 string.Join(" | ", validationEx.Errors.Select(e => e.ErrorMessage))
             ),
+ 
             EmailAlreadyExistsException => (HttpStatusCode.Conflict, exception.Message),
             InvalidCredentialsException => (HttpStatusCode.Unauthorized, exception.Message),
-            AccountDeactivatedException => (HttpStatusCode.Forbidden, exception.Message),
+            AccountDeactivatedException => (HttpStatusCode.Forbidden, exception.Message), 
+            InvalidRefreshTokenException => (HttpStatusCode.Unauthorized, exception.Message),
             _ => (HttpStatusCode.InternalServerError, "An unexpected error occurred.")
         };
 
@@ -60,4 +62,5 @@ public class GlobalExceptionMiddleware
 
         await context.Response.WriteAsync(JsonSerializer.Serialize(response));
     }
+
 }

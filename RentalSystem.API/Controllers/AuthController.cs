@@ -1,6 +1,8 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using RentalSystem.Application.Features.Auth.Login;
+using RentalSystem.Application.Features.Auth.Logout;
+using RentalSystem.Application.Features.Auth.Refresh;
 using RentalSystem.Application.Features.Auth.Register;
 
 namespace RentalSystem.API.Controllers;
@@ -30,5 +32,21 @@ public class AuthController : ControllerBase
     {
         var result = await _mediator.Send(command, cancellationToken);
         return Ok(result);
+    }
+
+    [HttpPost("refresh")]
+    public async Task<ActionResult<RefreshTokenResult>> Refresh(
+        RefreshTokenCommand command, CancellationToken cancellationToken)
+    {
+        var result = await _mediator.Send(command, cancellationToken);
+        return Ok(result);
+    }
+
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout(
+        LogoutCommand command, CancellationToken cancellationToken)
+    {
+        await _mediator.Send(command, cancellationToken);
+        return NoContent();
     }
 }
