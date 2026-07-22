@@ -1,5 +1,4 @@
 <Solution>
-  <Project Path="RentalSystem.API/RentalSystem.API.csproj" />
   <Project Path="RentalSystem.Application/RentalSystem.Application.csproj" />
   <Project Path="RentalSystem.Domain/RentalSystem.Domain.csproj" />
   <Project Path="RentalSystem.Infrastructure/RentalSystem.Infrastructure.csproj" />
