@@ -18,7 +18,10 @@ public static class DependencyInjection
      services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
      services.AddScoped<IPasswordHasher, BCryptPasswordHasher>();
      services.AddScoped<IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
-     
+     services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
+     services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+     services.AddScoped<IRefreshTokenGenerator, RefreshTokenGenerator>();
+
      return services;
   }
 }
